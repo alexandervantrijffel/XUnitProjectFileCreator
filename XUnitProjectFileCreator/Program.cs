@@ -64,7 +64,7 @@ namespace XUnitProjectFileCreator
             }
             else
             {
-                startDirectory = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location);
+                startDirectory = Directory.GetCurrentDirectory();
             }
 
             using (var xml = new XmlTextWriter(programOptions.OutputFile, Encoding.UTF8))
